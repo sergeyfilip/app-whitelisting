@@ -1,0 +1,36 @@
+#!/usr/crystaleye/sandbox/usr/bin/php
+<?php
+
+/**
+ * Whitelisting fingerprints update script.
+ *
+ * @category   apps
+ * @package    whitelisting
+ * @subpackage scripts
+ * @author     RedPiranha <staff@redpiranha.net>
+ * @copyright  2012 RedPiranha
+ * @license    http://www.redpiranha.net/app_license RedPiranha license
+ * @link       http://www.redpiranha.net/support/documentation/crystaleye/whitelisting/
+ */
+
+///////////////////////////////////////////////////////////////////////////////
+// B O O T S T R A P
+///////////////////////////////////////////////////////////////////////////////
+
+$bootstrap = getenv('CRYSTALEYE_BOOTSTRAP') ? getenv('CRYSTALEYE_BOOTSTRAP') : '/usr/crystaleye/framework/shared';
+require_once $bootstrap . '/bootstrap.php';
+
+///////////////////////////////////////////////////////////////////////////////
+// D E P E N D E N C I E S
+///////////////////////////////////////////////////////////////////////////////
+
+use \crystaleye\apps\whitelisting\Whitelisting as Whitelisting;
+
+crystaleye_load_library('whitelisting/Whitelisting');
+
+///////////////////////////////////////////////////////////////////////////////
+// M A I N
+///////////////////////////////////////////////////////////////////////////////
+
+$wl = new Whitelisting();
+$wl->make_fingerprints_update();

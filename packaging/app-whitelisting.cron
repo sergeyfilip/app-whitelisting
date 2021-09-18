@@ -1,0 +1,2 @@
+00 23 * * * root /usr/sbin/update-fingerprints >/dev/null 2>&1
+

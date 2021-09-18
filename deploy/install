@@ -1,0 +1,15 @@
+#!/bin/sh
+
+/usr/sbin/addsudo /usr/bin/jparser app-whitelisting
+/usr/sbin/addsudo /usr/bin/jreport app-whitelisting
+/usr/sbin/addsudo /usr/bin/janalyzer app-whitelisting
+/usr/sbin/addsudo /usr/bin/jmapper app-whitelisting
+/usr/sbin/addsudo /usr/bin/jgenerator app-whitelisting
+/usr/sbin/addsudo /usr/bin/jupdater app-whitelisting
+/usr/sbin/addsudo /usr/bin/jmaker app-whitelisting
+/usr/sbin/addsudo /usr/bin/jinteger app-whitelisting
+chmod -R 755 /etc/suricata
+chmod -R 755 /var/lib/jparser
+chmod -R 755 /etc/jparser
+
+

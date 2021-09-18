@@ -1,0 +1,2 @@
+pass tls 192.168.8.100 any -> 104.16.13.243 any (msg:"pass match JA3 hash"; ja3_hash; content:"043a5d2d936910298e36e34acd8da818"; sid:2230022;rev:11;)
+alert tls any any -> any any (msg:"not match any  JA3 hash"; sid:2230274;rev:11;)
